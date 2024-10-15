@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
     <category>
-        <pattern>Hi</pattern>
-            <template>Hello this is Amy, A career advisor for computer science programs. My I have your name? </template>
+        <pattern>*</pattern>
+            <template>Hello! This is Amy, a career advisor for computer science program. May I have your name? (reply "my name is ..."</template>
     </category>
   
     <category>
         <pattern>My name is *</pattern>
-            <template>Welcome  
-                <set name = "userName"><star/></set>! What are you currently studying?
+            <template>Welcome <set name = "userName"><star/></set>! What are you currently studying?
                 <reply>
                     <text>Computer Science</text>
                     <postback>CSD</postback>
@@ -22,12 +21,12 @@
   
     <category>
         <pattern>NCS</pattern>
-        <template><get name = "userName"/>,Unfortunally,this is only for Computers Science student.Please refer to you program mentor to assist for your career opportunnities. Bye</template>
+        <template><get name = "userName"/>! Unfortunately, this chat is only available for Computer Science students. Please reach out to your program mentor for assistance with your career opportunities. Goodbye</template>
     </category> 
   
     <category>
         <pattern>CSD</pattern>
-            <template>Ok <get name = "userName"/>, what are in computer science interest you the most?
+            <template>Ok <get name = "userName"/>, which of these areas of computer science interests you the most?
                 <reply>
                     <text>Data</text>
                     <postback>DATA</postback>
@@ -45,12 +44,13 @@
   
     <category>
         <pattern>DATA</pattern>
-        <template> <get name = "userName"/>, Here is a list of job that you may be interested of:<br/>
+        <template> <get name = "userName"/>, Here is a list of jobs that you may be interested of:<br/>
             Data Scientist<br/>
             Data Analyst<br/>
             Data Engineer<br/>
             Business Intelligence Analyst<br/>
-            Machine Learning Engineer<br/>
+            Machine Learning Engineer<br/><br/>
+            To start again, say "hi"
         </template>
     </category>  
     
@@ -61,7 +61,8 @@
             Web Developer<br/>
             Mobile App Developer<br/>
             Game Developer<br/>
-            Full Stack Developer<br/>
+            Full Stack Developer<br/><br/>
+            To start again, say "hi"
         </template>
     </category>
     
@@ -72,7 +73,8 @@
             Information Security Specialist<br/>
             Security Engineer<br/>
             Penetration Tester<br/>
-            Security Consultant<br/>
+            Security Consultant<br/><br/>
+            To start again, say "hi"
         </template>
     </category>  
   
